@@ -3,12 +3,12 @@
   "info": {
     "title": "Hypodash API",
     "version": "v1",
-    "description": "OpenAPI specification for Hypodash public API (v1) — generated from routes/api.php"
+    "description": "OpenAPI specification for Hypodash public API (v1)"
   },
   "servers": [
     {
-      "url": "https://hypodash.test",
-      "description": "Development (Herd)"
+      "url": "https://hypodash.com",
+      "description": "Production"
     }
   ],
   "components": {
