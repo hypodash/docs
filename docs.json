@@ -22,10 +22,11 @@
           {
             "group": "Guides",
             "pages": [
-              "guides/create-agent",
-              "guides/configure-agent",
-              "guides/embed-widgets",
-              "guides/integrations"
+              "guides/setup-hypodash",
+              "guides/create-template",
+              "guides/generate-keywords",
+              "guides/generate-ideas",
+              "guides/create-schedule"
             ]
           }
         ]
