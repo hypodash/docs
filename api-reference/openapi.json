@@ -138,24 +138,5 @@
         "security": [{ "bearerAuth": [] }]
       }
     },
-    "/v1/article": {
-      "post": {
-        "summary": "Create article",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/components/schemas/NewArticle" }
-            }
-          }
-        },
-        "responses": {
-          "201": { "description": "Article created", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Article" } } } },
-          "422": { "description": "Validation Failed", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ValidationError" } } } },
-          "401": { "description": "Unauthorized" }
-        },
-        "security": [{ "bearerAuth": [] }]
-      }
-    }
   }
 }
