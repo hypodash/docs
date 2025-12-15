@@ -1,7 +1,11 @@
 ---
 title: "Setup Hypodash"
-description: "Description of your new file."
+description: "Learn the basics of setting up Hypodash"
 ---
+
+Hypodash uses your own ai provider key (OpenAI) to generate articles. Any usage is billed onto your OpenAI account, but allows for cheaper and unlimited usage for content generation and automation.
+
+Ensure your OpenAI key is valid, billing setup and has a verfified organization status to generate images.
 
 ## Setup your OpenAi API key
 
@@ -15,6 +19,20 @@ description: "Description of your new file."
   **Using your OpenAi key with Hypodash will consume tokens. You will be billed seperately by OpenAi outside your Hypodash plan.**
 </Info>
 
+## Setup your Youtube API key
+
+1. (Optional) If you wish to add relevant YouTube video embeds in your content, create a [YouTube API key](https://console.cloud.google.com/marketplace/product/google/youtube.googleapis.com).
+1. Navigate to [App Settings](https://hypodash.com/settings/app) and paste it under `YouTube API Key`.
+2. Usage is rate limited to 10,000 units per day. Units and limits can be found [here](https://developers.google.com/youtube/v3/guides/quota_and_compliance_audits?_gl=1*gqsto7*_up*MQ..*_ga*Mzg5MDA5OTY3LjE3NjU4MDI2Mjk.*_ga_SM8HXJ53K2*czE3NjU4MDI2MjkkbzEkZzAkdDE3NjU4MDI2MjkkajYwJGwwJGgw).
+
 <Card title="Create Aritcle" icon="book" href="https://docs.hypodash.com/guides/create-article">
   Learn how to create your first article next.
 </Card>
+
+## Setup writing style and tone
+
+1. Navigate to [App Settings](https://hypodash.com/settings/app) and scroll down to add your `Website`, `Writing Example URL` and `Language` to use as reference when creating content.
+
+## Setup integrations and webhooks
+
+Learn more about automated integration methods [here](https://docs.hypodash.com/guides/create-article#automated).
