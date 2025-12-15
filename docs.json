@@ -22,8 +22,8 @@
           {
             "group": "Guides",
             "pages": [
-              "guides/create-article",
               "guides/setup-hypodash",
+              "guides/create-article",
               "guides/create-template",
               "guides/generate-keywords",
               "guides/generate-ideas",
