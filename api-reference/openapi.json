@@ -90,7 +90,7 @@
   "paths": {
     "/v1/team": {
       "get": {
-        "summary": "Get authenticated team/user",
+        "summary": "Get team",
         "description": "Returns the currently authenticated user (team) information.",
         "responses": {
           "200": {
