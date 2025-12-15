@@ -3,58 +3,91 @@ title: "Create Article"
 description: "Learn how to create your first AI article"
 ---
 
-Articles can be generated manually or via the Schedule feature. 
+Articles can be generated manually or via the Schedule feature.
 
 ## Setup your OpenAi API key
 
-1. Navigate to App Settings.
-2. If you dont already have an OpenAi key, please sign up and create one here.
-3. If you plan on generating images, please ensure your organization is verified under settings. Failure to verify will result in errors during article creation.
+1. Navigate to [App Settings](https://hypodash.com/settings/app).
+2. If you dont already have an OpenAi key, please [sign up](https://auth.openai.com/create-account) and create one [here](https://platform.openai.com/api-keys).
+3. If you plan on generating images, please ensure your [organization is verified](https://platform.openai.com/settings/organization/general) under General on the OpenAi dashboard. Failure to verify will result in errors during article creation.
 4. Ensure you either top up credits in the billing page or add your credit/debit card to avoid errors when generating content.
 5. Paste your key into the OpenAi Key field and save.
 
-**Using your OpenAi key with Hypodash will consume tokens. You will be billed seperately by OpenAi outside your Hypodash plan.**
+<Info>
+  **Using your OpenAi key with Hypodash will consume tokens. You will be billed seperately by OpenAi outside your Hypodash plan.**
+</Info>
 
 ## Create a template
 
 Templates make it easy to define modifiers and options for each generation and reuse them at a later date or with the Schedule feature.
 
-1. Navigate to the Template page and configure.
+1. Navigate to the `Template` page and configure.
 2. Setting the template to default will allow you to automatically use this template when creating new articles.
-3. If you decide to add image generations, please ensure your OpenAi organization is verified, otherwise it will fail.
-4. For YouTube integration, please add your YouTube API key under App Settings to inject relevant videos into the article sections.
+3. If you decide to add image generations, please ensure your **OpenAi organization is verified**, otherwise it will fail.
+4. For YouTube integration, please add your YouTube API key under [App Settings](https://hypodash.com/settings/app) to inject relevant videos into the article sections.
+
+<Warning>
+  If you plan on generating images, please ensure your [organization is verified](https://platform.openai.com/settings/organization/general) under General on the OpenAi dashboard. Failure to verify will result in errors during article creation.
+</Warning>
 
 ## How to create an article
 
-1. Navigate to the Article page on the dashboard.
-2. Click Create Article and fill out the fields.
+1. Navigate to the `Article` page on the dashboard.
+2. Click `Create Article` and fill out the fields.
 3. Ensure you have the correct template chosen on the recently created one above - otherwise we will use our basic default template.
-4. Once ready, click Generate Article and wait for the task to complete.
-5. For web research, image generations and video lookup, this can be upwards of a few minutes to complete.
+4. Once ready, click `Generate` and wait for the task to complete.
+5. For `web research`, `image generations` and `video lookup`, this can be upwards of a few minutes to complete.
 
-## Publishing articles 
+## Publishing articles
 
 Once an article is completed, you have a few options to publish.
 
 ### Manual
 
-1. Click into your new article and click the Download button.
-2. You will be presented with Markdown, HTML or Plain Text download options.
-3. If you generated images, you can also download media files here too. Note: media files are deleted after 48 hours, please ensure you download media files before they expire.
+1. Click into your new article and click the `Download` button.
+2. You will be presented with `Markdown`, `HTML` or `Plain Text` download options.
+3. If you generated images, you can also download `media files` here too.
+
+   <Info>
+     Media files are deleted after 48 hours, please ensure you download media files before they expire.
+   </Info>
 4. Image paths within the body of the article will be relative to the file name - you can easily append your new upload path afterwards.
 
 ## Automated
 
-Connect to various platforms via Zapier and automatically publish your articles anywhere. Hypodash also has an official WordPress app and API for custom solutions.
+Connect to various platforms via `Zapier` and automatically publish your articles anywhere. Hypodash also has an official `WordPress` app and `API` for custom solutions.
 
-### Zapier 
+### Zapier
 
-1. t
+1. Navigate to [App Settings](https://hypodash.com/settings/app) and scroll down to `Zapier`.
+1. Click `Add to Zapier` which will allow you to add the `Hypodash Beta Zapier` app.
+1. Setup the trigger and test the webhook event by creating a new article after integration is complete.
+
+<Info>
+  The Zapier app is in Beta. Please [get in touch](mailto:support@hypodash.com) if you have any issues or need help.
+</Info>
 
 ### WordPress
 
-1. t
+1. [Download the Beta plugin](https://hypodash.com/storage/wordpress/hypodash-plugin-wordpress.zip) and install the zip via your WordPress dashboard.
+1. Activate the plugin and navigate to `Settings` -\> `Hypodash`.
+1. Add your API key by pasting it after generating under [API Settings](https://hypodash.com/settings/api).
+1. Enable Webhook should be checked to allow new articles to come in.
+1. Navigate to [App Settings](https://hypodash.com/settings/app) and `Generate` and `Copy` the `Webhook Secret` . Paste in the secret on the WordPress settings.
+1. The `Default Category` allows new posts to be added to that category on import.
+1. Next, copy the `Webhook Endpoint` path and paste it under `Webhook URL` on [App Settings](https://hypodash.com/settings/app).
+1. Finally, click `Save Changes` on the plugin.
 
 ### API
 
-1. t
+<Info>
+  Currently we only support webhooks after the article is generated. If you require articles to be generated via API, please [get in touch](mailto:support@hypodash.com). Otherwise, check out the [Schedule](https://docs.hypodash.com/guides/create-schedule) feature.
+</Info>
+
+1. Add your Webhook POST endpoint under `Webhook URL` on [App Settings](https://hypodash.com/settings/app).
+1. Navigate to [App Settings](https://hypodash.com/settings/app) and `Generate` and `Copy` the `Webhook Secret` . Verify this during your webhook POST request via `X-Hypodash-Signature` header.
+2. Create a new `Article` on the dashboard and listen for the payload request.
+
+<Info>
+  Webhooks are triggered as soon as the article and media for that article is completed. If you have a publish date, this will be included in the payload, but schedule logic should be handled afterwards.
+</Info>
