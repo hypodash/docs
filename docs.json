@@ -25,8 +25,8 @@
               "guides/setup-hypodash",
               "guides/create-article",
               "guides/create-template",
-              "guides/generate-keywords",
               "guides/generate-ideas",
+              "guides/generate-keywords",
               "guides/create-schedule"
             ]
           }
